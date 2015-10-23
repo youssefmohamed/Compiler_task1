@@ -1,0 +1,9 @@
+E:\4th year\compiler\tasks\1\task1\task1\bin\Debug\task1.exe.config
+E:\4th year\compiler\tasks\1\task1\task1\bin\Debug\task1.exe
+E:\4th year\compiler\tasks\1\task1\task1\bin\Debug\task1.pdb
+E:\4th year\compiler\tasks\1\task1\task1\obj\Debug\task1.csprojResolveAssemblyReference.cache
+E:\4th year\compiler\tasks\1\task1\task1\obj\Debug\task1.Form1.resources
+E:\4th year\compiler\tasks\1\task1\task1\obj\Debug\task1.Properties.Resources.resources
+E:\4th year\compiler\tasks\1\task1\task1\obj\Debug\task1.csproj.GenerateResource.Cache
+E:\4th year\compiler\tasks\1\task1\task1\obj\Debug\task1.exe
+E:\4th year\compiler\tasks\1\task1\task1\obj\Debug\task1.pdb
