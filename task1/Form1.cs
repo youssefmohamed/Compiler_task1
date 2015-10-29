@@ -13,7 +13,7 @@ namespace task1
     public partial class Form1 : Form
     {
 
-        private Scanner scanner;
+        private Scanner scanner; 
 
         public Form1()
         {
@@ -24,6 +24,8 @@ namespace task1
         {
             scanner = new Scanner(editor);
             List<Token> token = scanner.tokens();
+
+
 
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
@@ -42,6 +44,10 @@ namespace task1
                 dataGridView2.Rows.Add();
                 dataGridView2.Rows[i].Cells[0].Value = scanner.error[i].lineNumber;
                 dataGridView2.Rows[i].Cells[1].Value = scanner.error[i].desc;
+
+                //editor.SelectionStart = 0;
+                //editor.SelectionLength = editor.Lines[scanner.error[i].lineNumber].Length;
+                //editor.SelectionColor = Color.Red;
             }
 
             for (int i = 0; i < scanner.comment.Count; ++i)
@@ -56,6 +62,7 @@ namespace task1
                 dataGridView4.Rows.Add();
                 dataGridView4.Rows[i].Cells[0].Value = scanner.symbol[i].lineNumber;
                 dataGridView4.Rows[i].Cells[1].Value = scanner.symbol[i].symbol;
+                
             }
 
         }

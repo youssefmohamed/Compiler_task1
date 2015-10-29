@@ -37,4 +37,20 @@ namespace task1
         public int lineNumber;
         public string symbol;
     }
+
+    public struct State
+    {
+        public int stateNum;
+        public bool isStart;
+        public bool isFinal;
+        public bool isError;
+    }
+
+    public struct Transition 
+    {
+        public int currState;
+        public int newState;
+        public char val;
+    }
+
 }

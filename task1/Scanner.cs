@@ -12,13 +12,17 @@ namespace task1
         private RichTextBox editor;
         public List<Error> error;
         public List<Comment> comment;
-        public List<Symbol> symbol;
+        public List<Symbol> symbol; 
+        public List<State> state;
+        public List<Transition> transition;
 
         public Scanner(RichTextBox editor) {
             this.editor = editor;
             error = new List<Error>();
             comment = new List<Comment>();
             symbol = new List<Symbol>();
+            state = new List<State>();
+            transition = new List<Transition>();
         }
 
         public List<Token> tokens() 
@@ -120,10 +124,19 @@ namespace task1
                             while (editor.Lines[i][t] != '}')
                             {
                                 chars += editor.Lines[i][t];
-                                t++;
+                                t++; 
                                 if (editor.Lines[i].Length <= t)
                                     break;
                             }
+                        }
+                        if (editor.Lines[i][editor.Lines[i].Length-1] != '}') 
+                        {
+                            err.desc = "invalid expression " + chars + " with  " + editor.Lines[i][t-1];
+                            err.lineNumber = i + 1;
+                            error.Add(err);
+                            ++t;
+
+                            continue;
                         }
                         t++;
                         comm.lineNumber = i + 1;
@@ -155,7 +168,7 @@ namespace task1
                             chars += editor.Lines[i][t];
                             t++;
                             Token tok = new Token();
-                            tok.name = chars;
+                            tok.name = "_";
                             tok.tokenType = this.getSymbol(chars) ;
                             token.Add(tok);
                         }
