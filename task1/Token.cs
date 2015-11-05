@@ -40,7 +40,7 @@ namespace task1
 
     public struct State
     {
-        public int stateNum;
+        public int val; 
         public bool isStart;
         public bool isFinal;
         public bool isError;
@@ -49,7 +49,7 @@ namespace task1
     public struct Transition 
     {
         public int currState;
-        public int newState;
+        public int nextState;
         public char val;
     }
 
